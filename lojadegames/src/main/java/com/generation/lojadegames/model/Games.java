@@ -44,6 +44,10 @@ public class Games {
 	@ManyToOne
 	@JsonIgnoreProperties("games")
 	private Categoria categoria;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("games")
+	private Usuario usuario;
 
 	public Long getId() {
 		return id;
@@ -99,6 +103,14 @@ public class Games {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
 }
